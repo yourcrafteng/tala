@@ -250,6 +250,67 @@
     background: var(--gold);
   }
 
+  /* ── Prayer / message form ──────────────── */
+  .prayer-form {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 34px 30px;
+    box-shadow: 0 1px 2px rgba(43,39,34,0.03), 0 18px 40px -28px rgba(43,39,34,0.18);
+  }
+  .prayer-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+  .prayer-form .field {
+    margin-bottom: 18px;
+  }
+  .prayer-form input,
+  .prayer-form textarea {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.98rem;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    resize: vertical;
+  }
+  .prayer-form input:focus,
+  .prayer-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .prayer-form textarea {
+    min-height: 110px;
+    line-height: 1.5;
+  }
+  .prayer-form button {
+    appearance: none;
+    background: var(--gold-deep);
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px 26px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .prayer-form button:hover { background: var(--gold); }
+  .prayer-form button:disabled { opacity: 0.6; cursor: default; }
+  .form-status {
+    margin-top: 14px;
+    font-size: 0.92rem;
+  }
+  .form-status.success { color: var(--gold-deep); }
+  .form-status.error { color: #B4483A; }
+
   /* ── Resources ──────────────────────────── */
   .res-group { margin-bottom: 26px; }
   .res-group:last-child { margin-bottom: 0; }
@@ -394,6 +455,26 @@
       </div>
     </section>
 
+    <!-- Section 4b: Prayers & messages -->
+    <section>
+      <p class="eyebrow">For Tala</p>
+      <h2>Leave a prayer or message</h2>
+      <p>If you'd like to share a prayer, a memory, or a few words for Tala and her family, we'd be grateful to read them.</p>
+
+      <form id="prayerForm" class="prayer-form" action="https://formspree.io/f/xkodwbjz" method="POST">
+        <div class="field">
+          <label for="prayerName">Name (optional)</label>
+          <input type="text" id="prayerName" name="name" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="prayerMessage">Your message</label>
+          <textarea id="prayerMessage" name="message" placeholder="Share a prayer, memory, or message..." required></textarea>
+        </div>
+        <button type="submit">Send message</button>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+
     <!-- Section 5: Resources -->
     <section>
       <p class="eyebrow">Help &amp; information</p>
@@ -467,7 +548,37 @@
   carousel.addEventListener('scroll', () => {
     const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
     dots.forEach((d, i) => d.classList.toggle('active', i === index));
-  }, { passive: true });
+  }, { passive: true });  // Prayer / message form submission
+  const prayerForm = document.getElementById('prayerForm');
+  const formStatus = document.getElementById('formStatus');
+
+  prayerForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = prayerForm.querySelector('button');
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(prayerForm.action, {
+        method: 'POST',
+        body: new FormData(prayerForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        prayerForm.reset();
+        formStatus.textContent = 'Thank you — your message has been sent.';
+        formStatus.className = 'form-status success';
+      } else {
+        formStatus.textContent = 'Something went wrong. Please try again in a moment.';
+        formStatus.className = 'form-status error';
+      }
+    } catch (err) {
+      formStatus.textContent = 'Something went wrong. Please try again in a moment.';
+      formStatus.className = 'form-status error';
+    }
+
+    submitBtn.disabled = false;
+  });
 </script>
 
 </body>
