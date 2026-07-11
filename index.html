@@ -311,6 +311,48 @@
   .form-status.success { color: var(--gold-deep); }
   .form-status.error { color: #B4483A; }
 
+  /* ── Light a candle ─────────────────────── */
+  .candle-wrap {
+    text-align: center;
+    padding: 12px 0 4px;
+  }
+  .candle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .candle-btn:disabled { cursor: default; }
+  .candle-body { fill: var(--gold-wash); stroke: var(--care-border); stroke-width: 1; }
+  .candle-wick { fill: var(--ink-faint); }
+  .candle-flame {
+    fill: var(--ink-faint);
+    opacity: 0.3;
+    transition: fill 0.5s, opacity 0.5s;
+    transform-origin: 28px 30px;
+  }
+  .candle-btn.lit .candle-flame {
+    fill: #F0A93C;
+    opacity: 1;
+    animation: flicker 1.7s ease-in-out infinite;
+  }
+  @keyframes flicker {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    25% { transform: scale(1.05, 0.95) rotate(-1.5deg); opacity: 0.9; }
+    50% { transform: scale(0.97, 1.04) rotate(1deg); opacity: 1; }
+    75% { transform: scale(1.03, 0.97) rotate(-1deg); opacity: 0.94; }
+  }
+  .candle-status {
+    margin: 14px 0 2px;
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+  }
+  .candle-count {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    min-height: 1.2em;
+  }
+
   /* ── Resources ──────────────────────────── */
   .res-group { margin-bottom: 26px; }
   .res-group:last-child { margin-bottom: 0; }
@@ -455,6 +497,24 @@
       </div>
     </section>
 
+    <!-- Section 4a: Light a candle -->
+    <section>
+      <p class="eyebrow">In her memory</p>
+      <h2>Light a candle for Tala</h2>
+      <p>A small way to hold her in your thoughts for a moment.</p>
+      <div class="candle-wrap">
+        <button id="candleBtn" class="candle-btn" aria-pressed="false" aria-label="Light a candle for Tala">
+          <svg width="56" height="100" viewBox="0 0 56 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse class="candle-flame" cx="28" cy="22" rx="10" ry="16"></ellipse>
+            <rect class="candle-wick" x="26" y="34" width="4" height="8" rx="1"></rect>
+            <rect class="candle-body" x="14" y="40" width="28" height="55" rx="4"></rect>
+          </svg>
+        </button>
+        <p id="candleStatus" class="candle-status">Tap the candle to light it for Tala</p>
+        <p id="candleCount" class="candle-count"></p>
+      </div>
+    </section>
+
     <!-- Section 4b: Prayers & messages -->
     <section>
       <p class="eyebrow">For Tala</p>
@@ -578,6 +638,43 @@
     }
 
     submitBtn.disabled = false;
+  });  // Light a candle for Tala
+  const candleBtn = document.getElementById('candleBtn');
+  const candleStatus = document.getElementById('candleStatus');
+  const candleCount = document.getElementById('candleCount');
+  const CANDLE_KEY = 'tala-candle-lit';
+  const COUNTER_KEY = 'tala-memorial-candle-count';
+
+  function showLit() {
+    candleBtn.classList.add('lit');
+    candleBtn.setAttribute('aria-pressed', 'true');
+    candleStatus.textContent = 'A candle is lit for Tala 🕯️';
+  }
+
+  // Restore this visitor's own state — always works, no network needed
+  if (localStorage.getItem(CANDLE_KEY) === '1') {
+    showLit();
+  }
+
+  // Best-effort shared count — shown only if it loads successfully
+  function updateCountDisplay(value) {
+    if (typeof value === 'number' || typeof value === 'string') {
+      candleCount.textContent = `${value} candle${value == 1 ? '' : 's'} lit so far`;
+    }
+  }
+  fetch(`https://countapi.mileshilliard.com/api/v1/get/${COUNTER_KEY}`)
+    .then(res => res.ok ? res.json() : null)
+    .then(data => { if (data && data.value !== undefined) updateCountDisplay(data.value); })
+    .catch(() => {});
+
+  candleBtn.addEventListener('click', () => {
+    if (localStorage.getItem(CANDLE_KEY) === '1') return;
+    localStorage.setItem(CANDLE_KEY, '1');
+    showLit();
+    fetch(`https://countapi.mileshilliard.com/api/v1/hit/${COUNTER_KEY}`)
+      .then(res => res.ok ? res.json() : null)
+      .then(data => { if (data && data.value !== undefined) updateCountDisplay(data.value); })
+      .catch(() => {});
   });
 </script>
 
