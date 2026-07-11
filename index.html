@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Congenital AML — In Memory of Tala</title>
+<meta name="description" content="A page raising awareness of congenital acute myeloid leukemia (AML), in memory of Tala. What it is, what to watch for, and where families can find help.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBF8F2;
+    --surface: #FFFFFF;
+    --ink: #2B2722;
+    --ink-soft: #5C554B;
+    --ink-faint: #8A8175;
+    --gold: #C9A227;        /* childhood cancer awareness gold */
+    --gold-deep: #A8851C;
+    --gold-wash: #F6EFD9;
+    --line: #ECE5D6;
+    --care: #F4EEDD;
+    --care-border: #E4D7A8;
+    --maxw: 680px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── Header ─────────────────────────────── */
+  header {
+    text-align: center;
+    padding: 88px 24px 64px;
+  }
+
+  .ribbon {
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 28px;
+    display: block;
+  }
+
+  header h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 6vw, 2.9rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+    color: var(--ink);
+  }
+
+  header .lede {
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* ── Sections ───────────────────────────── */
+  section {
+    padding: 40px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  section h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 18px; }
+  p:last-child { margin-bottom: 0; }
+
+  a {
+    color: var(--gold-deep);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a:hover { color: var(--gold); }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin: 0 0 10px;
+  }
+
+  /* ── Care note ──────────────────────────── */
+  .care {
+    background: var(--care);
+    border: 1px solid var(--care-border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .care strong { color: var(--ink); }
+
+  /* ── Signs list ─────────────────────────── */
+  .signs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px;
+  }
+  .signs li {
+    position: relative;
+    padding: 9px 0 9px 26px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-soft);
+  }
+  .signs li:last-child { border-bottom: none; }
+  .signs li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 18px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ── Tala's story ───────────────────────── */
+  .story {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 40px 34px;
+    box-shadow: 0 1px 2px rgba(43,39,34,0.03), 0 18px 40px -28px rgba(43,39,34,0.18);
+  }
+  .story .dates {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--gold-deep);
+    text-align: center;
+    margin: 0 0 26px;
+    letter-spacing: 0.02em;
+  }
+  .story .dates span {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--ink-faint);
+  }
+  .story p { color: var(--ink-soft); }
+  .story .turn {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.18rem;
+    color: var(--ink);
+    line-height: 1.5;
+    margin: 24px 0;
+    text-align: center;
+  }
+  .story .close {
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+  }
+  .story .alone {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ── Photo carousel ─────────────────────── */
+  .carousel-wrap {
+    margin: 28px 0 4px;
+  }
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 12px;
+    border-radius: 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;             /* hide scrollbar, Firefox */
+  }
+  .carousel::-webkit-scrollbar { display: none; }  /* hide scrollbar, Chrome/Safari */
+  .carousel img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: var(--gold-wash);
+  }
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 14px;
+  }
+  .carousel-btn {
+    appearance: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--gold-deep);
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .carousel-btn:hover {
+    border-color: var(--care-border);
+    transform: translateY(-1px);
+  }
+  .carousel-dots {
+    display: flex;
+    gap: 8px;
+  }
+  .carousel-dots .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--line);
+    transition: background 0.25s;
+  }
+  .carousel-dots .dot.active {
+    background: var(--gold);
+  }
+
+  /* ── Resources ──────────────────────────── */
+  .res-group { margin-bottom: 26px; }
+  .res-group:last-child { margin-bottom: 0; }
+  .res-group h3 {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 12px;
+  }
+  .res {
+    display: block;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .res:hover {
+    border-color: var(--care-border);
+    transform: translateY(-1px);
+  }
+  .res .name {
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 3px;
+  }
+  .res .desc {
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* ── Footer ─────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 0 72px;
+    text-align: center;
+  }
+  footer .sources {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    line-height: 1.7;
+  }
+  footer .sources a { color: var(--ink-faint); }
+  footer .sources a:hover { color: var(--gold-deep); }
+  footer .mark {
+    margin-top: 22px;
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--gold-deep);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    header { padding: 64px 20px 48px; }
+    .story { padding: 30px 22px; }
+    .story .dates span { display: block; margin: 4px 0; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <!-- Gold awareness ribbon -->
+    <svg class="ribbon" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 17C9 14 5.5 9.5 5.5 6.2 5.5 3.3 7.4 1.5 9.2 1.5c1.5 0 2.4 1 2.8 1.9.4-.9 1.3-1.9 2.8-1.9 1.8 0 3.7 1.8 3.7 4.7C18.5 9.5 15 14 12 17Z" stroke="#C9A227" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M10.2 15.5 6 27l4.6-3.2M13.8 15.5 18 27l-4.6-3.2" stroke="#C9A227" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <h1>Understanding Congenital AML</h1>
+    <p class="lede">A rare leukemia present at or near birth. This page exists to raise awareness, share what's known, and point families and supporters toward trusted resources.</p>
+  </header>
+
+  <main class="wrap">
+
+    <!-- Section 2: What it is -->
+    <section>
+      <p class="eyebrow">What it is</p>
+      <h2>What is congenital AML?</h2>
+      <p>Acute myeloid leukemia (AML) is a cancer of the blood and bone marrow, where the body produces large numbers of abnormal blood cells. When leukemia is diagnosed in the first weeks of life, it is called congenital leukemia — a very rare condition, generally defined in medical literature as leukemia diagnosed between birth and about four weeks of age. In newborns, AML is the most common form.</p>
+      <p>Congenital AML is rare, estimated to occur in roughly 1 to 5 newborns per million births. Because it begins so early, its signs can appear at or shortly after birth — and they can look like those of other, more common newborn conditions, which is one reason awareness matters. The disease is strongly linked to specific genetic changes, which doctors use to understand its risk and guide treatment.</p>
+      <div class="care">
+        This page is for awareness and general information only. It is not medical advice and cannot replace a doctor. If you have any concern about a child's health, please speak with a qualified medical professional. For detailed information on diagnosis, treatment, and outlook, see the trusted organizations linked below.
+      </div>
+    </section>
+
+    <!-- Section 3: Signs -->
+    <section>
+      <p class="eyebrow">What to know</p>
+      <h2>Signs and symptoms</h2>
+      <p>The signs of congenital AML can be easy to miss or mistaken for other, more common newborn conditions. Many of the symptoms below have causes that have nothing to do with leukemia. They are listed here for awareness, not for diagnosis.</p>
+      <ul class="signs">
+        <li>Pale skin, or looking unusually tired or weak</li>
+        <li>Easy bruising or bleeding</li>
+        <li>Small flat red or purple spots under the skin (petechiae)</li>
+        <li>Firmness or swelling in the abdomen</li>
+        <li>Unusual skin lumps or patches — sometimes blue, purple, or green (leukemia cutis)</li>
+        <li>Fever</li>
+        <li>Poor feeding or loss of appetite</li>
+      </ul>
+      <div class="care">
+        <strong>Only a doctor can determine what is causing any of these signs.</strong> If you notice anything about a child's health that worries you, contact a qualified medical professional. Most of the time these symptoms are caused by something other than leukemia — but they should always be checked by someone qualified to assess them.
+      </div>
+    </section>
+
+    <!-- Section 4: Tala's story -->
+    <section>
+      <p class="eyebrow">Our story</p>
+      <h2>Tala's story</h2>
+      <div class="story">
+        <p class="dates">November 11, 2025 <span>—</span> February 3, 2026</p>
+
+        <!-- Photo carousel: replace the src values with your photo filenames -->
+        <div class="carousel-wrap">
+          <div class="carousel" id="carousel" aria-label="Photos of Tala">
+            <img src="20251120_200529.jpg" alt="Tala">
+            <img src="20251122_140434.jpg" alt="Tala">
+            <img src="20251125_070502.jpg" alt="Tala">
+            <img src="20251224_161041.jpg" alt="Tala">
+            <img src="20251227_080848.jpg" alt="Tala">
+            <img src="20260101_104807.jpg" alt="Tala">
+            <img src="20260110_170344.jpg" alt="Tala">
+            <img src="20260124_202629(0).jpg" alt="Tala">
+            <img src="20260205_184018.jpg" alt="Tala">
+            <img src="IMG_20260711_162025.jpg" alt="Tala">
+            <img src="IMG_20260711_162025%20(1).jpg" alt="Tala">
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" onclick="scrollCarousel(-1)" aria-label="Previous photo">‹</button>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <button class="carousel-btn" onclick="scrollCarousel(1)" aria-label="Next photo">›</button>
+          </div>
+        </div>
+
+        <p>Our daughter Tala was born on November 11, 2025, by emergency C-section. At first it was a mystery — she was covered in small blue spots and struggling to breathe. My wife's pregnancy had been perfect. She'd been under the care of a perinatologist. There had been no warning.</p>
+        <p class="turn">The next day, we learned that Tala had leukemia — congenital AML, with high-risk genetics.</p>
+        <p>We spent the following months with her in the hospital, helping her through chemotherapy, staying close, doing everything we could. She died on February 3, 2026, before she could begin her second round.</p>
+        <p class="close">This page exists because of Tala. Congenital leukemia is rare, and it can arrive without any warning — even when everything about a pregnancy seems healthy. We're sharing her story, and what we learned, in the hope that we can help any other family going through this, in any way we can. <span class="alone">If that's you: you are not alone.</span></p>
+      </div>
+    </section>
+
+    <!-- Section 5: Resources -->
+    <section>
+      <p class="eyebrow">Help &amp; information</p>
+      <h2>Where to find help and information</h2>
+      <p>These are starting points. A family's own medical team is always the best source of guidance for their specific situation — but if you're looking for trustworthy information, support, or help, these organizations are here.</p>
+
+      <div class="res-group">
+        <h3>Understanding the disease</h3>
+        <a class="res" href="https://www.cancer.gov/types/leukemia/patient/child-aml-treatment-pdq" target="_blank" rel="noopener">
+          <p class="name">National Cancer Institute — Childhood AML</p>
+          <p class="desc">Clear, government-maintained information on childhood AML, written for patients and families.</p>
+        </a>
+        <a class="res" href="https://www.chop.edu/conditions-diseases/acute-myelogenous-leukemia-aml/resources" target="_blank" rel="noopener">
+          <p class="name">Children's Hospital of Philadelphia — AML Resources</p>
+          <p class="desc">Accessible information and a curated resource list from a leading children's hospital.</p>
+        </a>
+        <a class="res" href="https://www.fredhutch.org/en/news/center-news/2021/11/pediatric-aml-soheil-meshinchi.html" target="_blank" rel="noopener">
+          <p class="name">Fred Hutchinson Cancer Center — Pediatric AML Research</p>
+          <p class="desc">Home of the TARGET AML project, working to understand the genetics of childhood AML and develop targeted treatments built for children — not adapted from adults.</p>
+        </a>
+      </div>
+
+      <div class="res-group">
+        <h3>Support for families</h3>
+        <a class="res" href="https://www.lls.org/" target="_blank" rel="noopener">
+          <p class="name">The Leukemia &amp; Lymphoma Society</p>
+          <p class="desc">Information on blood cancers, plus patient support and financial assistance programs.</p>
+        </a>
+        <a class="res" href="https://www.alexslemonade.org/" target="_blank" rel="noopener">
+          <p class="name">Alex's Lemonade Stand Foundation</p>
+          <p class="desc">Childhood cancer research and family support, including a parent-to-parent network.</p>
+        </a>
+        <a class="res" href="https://www.cancercare.org/diagnosis/leukemia" target="_blank" rel="noopener">
+          <p class="name">CancerCare</p>
+          <p class="desc">Free emotional support, counseling, and limited financial assistance for families affected by cancer.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="sources">
+        Medical information on this page draws on the
+        <a href="https://www.cancer.gov/types/leukemia/patient/child-aml-treatment-pdq" target="_blank" rel="noopener">National Cancer Institute</a>
+        and peer-reviewed medical literature. It is for awareness only and is not medical advice.
+      </p>
+      <p class="mark">In loving memory of Tala</p>
+    </div>
+  </footer>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const dotsContainer = document.getElementById('carouselDots');
+  const slides = carousel.querySelectorAll('img');
+
+  // Build one dot per photo
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dotsContainer.appendChild(dot);
+  });
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  function scrollCarousel(direction) {
+    carousel.scrollBy({ left: direction * carousel.clientWidth, behavior: 'smooth' });
+  }
+
+  // Update the active dot as the user scrolls or swipes
+  carousel.addEventListener('scroll', () => {
+    const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  }, { passive: true });
+</script>
+
+</body>
+</html>
