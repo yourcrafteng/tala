@@ -352,6 +352,34 @@
     color: var(--ink-faint);
     min-height: 1.2em;
   }
+  .candle-field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    max-width: 340px;
+    margin: 18px auto 0;
+    min-height: 14px;
+  }
+  .candle-field .flame {
+    width: 8px;
+    height: 12px;
+    border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+    background: radial-gradient(circle at 50% 35%, #FFE3A3, #F0A93C 55%, #C97A2E 100%);
+    box-shadow: 0 0 6px 1px rgba(240,169,60,0.5);
+    animation: flicker 1.6s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  .candle-field .flame.mine {
+    box-shadow: 0 0 10px 2px rgba(240,169,60,0.9);
+  }
+  .candle-more {
+    align-self: center;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    margin-left: 2px;
+  }
 
   /* ── Resources ──────────────────────────── */
   .res-group { margin-bottom: 26px; }
@@ -516,6 +544,7 @@
         </button>
         <p id="candleStatus" class="candle-status">Tap the candle to light it for Tala</p>
         <p id="candleCount" class="candle-count"></p>
+        <div id="candleField" class="candle-field" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -642,12 +671,16 @@
     }
 
     submitBtn.disabled = false;
-  });  // Light a candle for Tala
+  });
+
+  // Light a candle for Tala
   const candleBtn = document.getElementById('candleBtn');
   const candleStatus = document.getElementById('candleStatus');
   const candleCount = document.getElementById('candleCount');
+  const candleField = document.getElementById('candleField');
   const CANDLE_KEY = 'tala-candle-lit';
   const COUNTER_KEY = 'tala-memorial-candle-count';
+  const FIELD_MAX = 80; // cap how many flame icons we render, for performance
 
   function showLit() {
     candleBtn.classList.add('lit');
@@ -656,19 +689,38 @@
   }
 
   // Restore this visitor's own state — always works, no network needed
-  if (localStorage.getItem(CANDLE_KEY) === '1') {
+  const alreadyLit = localStorage.getItem(CANDLE_KEY) === '1';
+  if (alreadyLit) {
     showLit();
   }
 
-  // Best-effort shared count — shown only if it loads successfully
-  function updateCountDisplay(value) {
-    if (typeof value === 'number' || typeof value === 'string') {
-      candleCount.textContent = `${value} candle${value == 1 ? '' : 's'} lit so far`;
+  // Renders the field of small flames representing the shared count.
+  // highlightLast: give the newest flame a slightly brighter glow (the one just lit).
+  function renderField(count, highlightLast) {
+    candleField.innerHTML = '';
+    if (!count || count < 1) return;
+
+    const shown = Math.min(count, FIELD_MAX);
+    for (let i = 0; i < shown; i++) {
+      const flame = document.createElement('span');
+      flame.className = 'flame';
+      if (highlightLast && i === shown - 1) flame.classList.add('mine');
+      flame.style.animationDelay = `${(Math.random() * 1.6).toFixed(2)}s`;
+      candleField.appendChild(flame);
     }
+    if (count > FIELD_MAX) {
+      const more = document.createElement('span');
+      more.className = 'candle-more';
+      more.textContent = `+ ${count - FIELD_MAX} more`;
+      candleField.appendChild(more);
+    }
+    candleCount.textContent = `${count} candle${count == 1 ? '' : 's'} lit so far`;
   }
+
+  // Best-effort shared count — the field only appears if this loads successfully
   fetch(`https://countapi.mileshilliard.com/api/v1/get/${COUNTER_KEY}`)
     .then(res => res.ok ? res.json() : null)
-    .then(data => { if (data && data.value !== undefined) updateCountDisplay(data.value); })
+    .then(data => { if (data && data.value !== undefined) renderField(data.value, false); })
     .catch(() => {});
 
   candleBtn.addEventListener('click', () => {
@@ -677,7 +729,7 @@
     showLit();
     fetch(`https://countapi.mileshilliard.com/api/v1/hit/${COUNTER_KEY}`)
       .then(res => res.ok ? res.json() : null)
-      .then(data => { if (data && data.value !== undefined) updateCountDisplay(data.value); })
+      .then(data => { if (data && data.value !== undefined) renderField(data.value, true); })
       .catch(() => {});
   });
 </script>
