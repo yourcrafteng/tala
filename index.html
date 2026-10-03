@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Understanding Congenital AML — In Memory of Tala</title>
 <meta name="description" content="A page raising awareness of congenital acute myeloid leukemia (AML), in memory of Tala. What it is, what to watch for, and where families can find help.">
+<link rel="canonical" href="https://talatoa.org/">
+
+<!-- Link preview (iMessage, WhatsApp, Facebook, X). The image is share.jpg in the repo root. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="In Memory of Tala">
+<meta property="og:url" content="https://talatoa.org/">
+<meta property="og:title" content="Understanding Congenital AML — In Memory of Tala">
+<meta property="og:description" content="A page raising awareness of congenital acute myeloid leukemia (AML), in memory of Tala. What it is, what to watch for, and where families can find help.">
+<meta property="og:image" content="https://talatoa.org/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Close-up of Tala asleep, swaddled in a pink blanket, with a small tube taped at her nose">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Understanding Congenital AML — In Memory of Tala">
+<meta name="twitter:description" content="A page raising awareness of congenital acute myeloid leukemia (AML), in memory of Tala. What it is, what to watch for, and where families can find help.">
+<meta name="twitter:image" content="https://talatoa.org/share.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -53,8 +70,48 @@
   .ribbon {
     width: 34px;
     height: 34px;
-    margin: 0 auto 28px;
+    margin: 0 auto 22px;
     display: block;
+  }
+
+  /* Tala's name, dates, and the meaning of her names, above the title */
+  .memorial {
+    margin: 0 auto 30px;
+    padding-bottom: 28px;
+    max-width: 320px;
+    border-bottom: 1px solid var(--line);
+  }
+  .memorial .name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    margin: 0 0 6px;
+  }
+  .memorial .dates {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 0.98rem;
+    letter-spacing: 0.02em;
+    color: var(--gold-deep);
+    margin: 0 0 8px;
+  }
+  .memorial .meaning {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .memorial .hero-photo {
+    display: block;
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--gold-wash);
+    margin: 0 auto 18px;
   }
 
   header h1 {
@@ -193,6 +250,7 @@
   }
   .carousel {
     display: flex;
+    align-items: flex-start;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -202,15 +260,42 @@
     scrollbar-width: none;             /* hide scrollbar, Firefox */
   }
   .carousel::-webkit-scrollbar { display: none; }  /* hide scrollbar, Chrome/Safari */
-  .carousel img {
+  .carousel figure {
+    flex: 0 0 100%;
+    margin: 0;
+    scroll-snap-align: start;
+  }
+  .carousel figure img {
+    display: block;
     width: 100%;
     height: auto;
-    flex-shrink: 0;
-    scroll-snap-align: start;
     border-radius: 14px;
     border: 1px solid var(--line);
     background: var(--gold-wash);
   }
+  /* Caption under each photo: date and age, then a one-line description.
+     Empty parts take up no space, so a missing caption never shows a gap. */
+  .carousel figcaption {
+    margin-top: 12px;
+    padding: 0 6px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .carousel figcaption:empty { display: none; }
+  .carousel .cap-date {
+    display: block;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: var(--gold-deep);
+  }
+  .carousel .cap-text {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .carousel .cap-text:empty { display: none; }
   .carousel-controls {
     display: flex;
     align-items: center;
@@ -343,14 +428,16 @@
     75% { transform: scale(1.03, 0.97) rotate(-1deg); opacity: 0.94; }
   }
   .candle-status {
-    margin: 14px 0 2px;
+    margin: 14px 0 4px;
     font-size: 0.97rem;
     color: var(--ink-soft);
   }
   .candle-count {
-    font-size: 0.85rem;
-    color: var(--ink-faint);
-    min-height: 1.2em;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    color: var(--gold-deep);
+    min-height: 1.7em;
   }
   .candle-field {
     display: flex;
@@ -359,7 +446,7 @@
     align-items: flex-end;
     row-gap: 6px;
     max-width: 320px;
-    margin: 22px auto 0;
+    margin: 18px auto 0;
     min-height: 14px;
   }
   .vigil-candle {
@@ -452,7 +539,9 @@
 
   @media (max-width: 560px) {
     body { font-size: 16px; }
-    header { padding: 64px 20px 48px; }
+    header { padding: 44px 20px 44px; }
+    .ribbon { margin-bottom: 18px; }
+    .memorial { margin-bottom: 24px; padding-bottom: 22px; }
     .story { padding: 30px 22px; }
     .story .dates span { display: block; margin: 4px 0; }
   }
@@ -466,6 +555,16 @@
       <path d="M12 17C9 14 5.5 9.5 5.5 6.2 5.5 3.3 7.4 1.5 9.2 1.5c1.5 0 2.4 1 2.8 1.9.4-.9 1.3-1.9 2.8-1.9 1.8 0 3.7 1.8 3.7 4.7C18.5 9.5 15 14 12 17Z" stroke="#C9A227" stroke-width="1.6" stroke-linejoin="round"/>
       <path d="M10.2 15.5 6 27l4.6-3.2M13.8 15.5 18 27l-4.6-3.2" stroke="#C9A227" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
+
+    <!-- Tala's name, dates, and the meaning of her names -->
+    <div class="memorial">
+      <img class="hero-photo" src="hero.jpg" alt="Close-up of Tala asleep, swaddled in a pink blanket, with a small tube taped at her nose" width="400" height="400">
+      <p class="eyebrow">In loving memory of</p>
+      <p class="name">Tala</p>
+      <p class="dates">November 11, 2025 — February 3, 2026</p>
+      <p class="meaning">Tala, storyteller. Toa, warrior.</p>
+    </div>
+
     <h1>Understanding Congenital AML</h1>
     <p class="lede">A rare leukemia present at or near birth. This page exists to raise awareness, share what's known, and point families and supporters toward trusted resources.</p>
   </header>
@@ -509,20 +608,54 @@
       <div class="story">
         <p class="dates">November 11, 2025 <span>—</span> February 3, 2026</p>
 
-        <!-- Photo carousel: replace the src values with your photo filenames -->
+        <!-- Photo carousel.
+             Each photo is a <figure>: the image, then a caption with two parts.
+               cap-date : the date (from the filename) and Tala's age that day.
+               cap-text : a one-line description in Deion's words.
+             Anything marked CAPTION NEEDED is invisible on the page until it is filled in.
+             When a description is added, also add it to that photo's alt text. -->
         <div class="carousel-wrap">
           <div class="carousel" id="carousel" aria-label="Photos of Tala">
-            <img src="20251120_200529.jpg" alt="Tala">
-            <img src="20251122_140434.jpg" alt="Tala">
-            <img src="20251125_070502.jpg" alt="Tala">
-            <img src="20251224_161041.jpg" alt="Tala">
-            <img src="20251227_080848.jpg" alt="Tala">
-            <img src="20260101_104807.jpg" alt="Tala">
-            <img src="20260110_170344.jpg" alt="Tala">
-            <img src="20260124_202629(0).jpg" alt="Tala">
-            <img src="20260205_184018.jpg" alt="Tala">
-            <img src="IMG_20260711_162025.jpg" alt="Tala">
-            <img src="IMG_20260711_162025%20(1).jpg" alt="Tala">
+            <figure>
+              <img src="20251120_200529.jpg" alt="Newborn Tala asleep in her NICU bed with a breathing tube, her tiny hand wrapped around an adult's finger" width="1200" height="1600">
+              <figcaption><span class="cap-date">November 20, 2025 · 9 days old</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="20251122_140434.jpg" alt="Close-up of Tala asleep, swaddled in a pink blanket, with a small tube taped at her nose" width="1200" height="1600" loading="lazy">
+              <figcaption><span class="cap-date">November 22, 2025 · 11 days old</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="20251125_070502.jpg" alt="A yellow cake decorated with icing sunflowers and white roses, with the words “Tala our Fighter”" width="1200" height="1600" loading="lazy">
+              <figcaption><span class="cap-date">November 25, 2025</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="20251224_161041.jpg" alt="A little girl with pigtails points up at a sign reading “Princess Tala” on Tala's hospital bed, which is decorated for Christmas and surrounded by medical equipment" width="1200" height="1600" loading="lazy">
+              <figcaption><span class="cap-date">December 24, 2025 · 6 weeks old</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="20251227_080848.jpg" alt="Tala smiling with one eye winking, wearing a pink bow headband, tucked under a blanket printed with lions" width="1200" height="1600" loading="lazy">
+              <figcaption><span class="cap-date">December 27, 2025 · 6 weeks old</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="20260101_104807.jpg" alt="Close-up of Tala with her eyes wide open, looking toward the camera from her hospital bed" width="1200" height="1600" loading="lazy">
+              <figcaption><span class="cap-date">January 1, 2026 · 7 weeks old</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="20260110_170344.jpg" alt="Tala looking at the camera, wearing a pink headband with a large flower, wrapped in a lion-print blanket" width="1200" height="1600" loading="lazy">
+              <figcaption><span class="cap-date">January 10, 2026 · 8 weeks old</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="20260124_202629(0).jpg" alt="Tala lying in her hospital crib in strawberry-print pajamas, looking up at a black-and-white mobile" width="1200" height="1600" loading="lazy">
+              <figcaption><span class="cap-date">January 24, 2026 · 10 weeks old</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="20260205_184018.jpg" alt="A memorial table at home: white roses and flowers around framed photos of Tala, a rosary and an angel, her handprint, her birth card, and her toys and books" width="1600" height="1200" loading="lazy">
+              <figcaption><span class="cap-date">February 5, 2026</span><span class="cap-text"><!-- CAPTION NEEDED: one line from Deion --></span></figcaption>
+            </figure>
+            <figure>
+              <img src="IMG_20260711_162025.jpg" alt="Close-up of Tala with bright, wide-open eyes and her mouth open, looking straight at the camera" width="1200" height="1600" loading="lazy">
+              <figcaption><!-- CAPTION NEEDED: the filename date (July 11, 2026) is when the file was saved, not when the photo was taken. Date and wording to come from Deion. --></figcaption>
+            </figure>
           </div>
           <div class="carousel-controls">
             <button class="carousel-btn" onclick="scrollCarousel(-1)" aria-label="Previous photo">‹</button>
@@ -555,8 +688,8 @@
             <rect class="candle-body" x="14" y="40" width="28" height="55" rx="4"></rect>
           </svg>
         </button>
-        <p id="candleStatus" class="candle-status">Tap the candle to light it for Tala</p>
-        <p id="candleCount" class="candle-count"></p>
+        <p id="candleStatus" class="candle-status" role="status">Tap the candle to light it for Tala</p>
+        <p id="candleCount" class="candle-count" aria-live="polite"></p>
         <div id="candleField" class="candle-field" aria-hidden="true"></div>
       </div>
     </section>
@@ -634,9 +767,11 @@
   </footer>
 
 <script>
+  // ── Photo carousel ──────────────────────────────────────────
   const carousel = document.getElementById('carousel');
   const dotsContainer = document.getElementById('carouselDots');
-  const slides = carousel.querySelectorAll('img');
+  const slides = carousel.querySelectorAll('figure');
+  const CAROUSEL_GAP = 12; // matches the gap in the .carousel CSS
 
   // Build one dot per photo
   slides.forEach((_, i) => {
@@ -647,14 +782,16 @@
   const dots = dotsContainer.querySelectorAll('.dot');
 
   function scrollCarousel(direction) {
-    carousel.scrollBy({ left: direction * carousel.clientWidth, behavior: 'smooth' });
+    carousel.scrollBy({ left: direction * (carousel.clientWidth + CAROUSEL_GAP), behavior: 'smooth' });
   }
 
   // Update the active dot as the user scrolls or swipes
   carousel.addEventListener('scroll', () => {
-    const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+    const index = Math.round(carousel.scrollLeft / (carousel.clientWidth + CAROUSEL_GAP));
     dots.forEach((d, i) => d.classList.toggle('active', i === index));
-  }, { passive: true });  // Prayer / message form submission
+  }, { passive: true });
+
+  // ── Prayer / message form submission ────────────────────────
   const prayerForm = document.getElementById('prayerForm');
   const formStatus = document.getElementById('formStatus');
 
@@ -686,14 +823,39 @@
     submitBtn.disabled = false;
   });
 
-  // Light a candle for Tala
+  // ── Light a candle for Tala ─────────────────────────────────
+  // Each visitor can light one candle per day. The running total is kept by a
+  // shared counter; the last total seen is also remembered in this browser, so
+  // the line "X candles lit for Tala" still shows if the counter is slow or down.
   const candleBtn = document.getElementById('candleBtn');
   const candleStatus = document.getElementById('candleStatus');
   const candleCount = document.getElementById('candleCount');
   const candleField = document.getElementById('candleField');
-  const CANDLE_KEY = 'tala-candle-lit';
-  const COUNTER_KEY = 'tala-memorial-candle-count';
+  const LIT_DATE_KEY = 'tala-candle-lit-date';        // the day this visitor last lit a candle
+  const LAST_COUNT_KEY = 'tala-candle-last-count';    // the last shared total this browser saw
+  const COUNTER_KEY = 'tala-memorial-candle-count';   // the shared counter (unchanged, keeps the existing total)
+  const COUNTER_URL = 'https://countapi.mileshilliard.com/api/v1';
   const FIELD_MAX = 80; // cap how many flame icons we render, for performance
+
+  // Browser storage can be unavailable (private windows, blocked site data),
+  // so every read and write is guarded and the page works without it.
+  function readStore(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function writeStore(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) {}
+  }
+
+  // Today's date on the visitor's own clock, e.g. "2026-10-03"
+  function todayKey() {
+    const d = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  }
+
+  function litToday() {
+    return readStore(LIT_DATE_KEY) === todayKey();
+  }
 
   function showLit() {
     candleBtn.classList.add('lit');
@@ -701,16 +863,11 @@
     candleStatus.textContent = 'A candle is lit for Tala 🕯️';
   }
 
-  // Restore this visitor's own state — always works, no network needed
-  const alreadyLit = localStorage.getItem(CANDLE_KEY) === '1';
-  if (alreadyLit) {
-    showLit();
-  }
-
-  // Renders a vigil-style cluster of small candles, one per person.
+  // Renders the running total and a vigil-style cluster of small candles.
   // Heights vary naturally, like candles burned down to different lengths.
   // highlightLast: give the newest candle a brighter glow (the one just lit).
   function renderField(count, highlightLast) {
+    count = Number(count);
     candleField.innerHTML = '';
     if (!count || count < 1) return;
 
@@ -735,26 +892,43 @@
     if (count > FIELD_MAX) {
       const more = document.createElement('span');
       more.className = 'candle-more';
-      more.textContent = `+ ${count - FIELD_MAX} more`;
+      more.textContent = `+ ${(count - FIELD_MAX).toLocaleString()} more`;
       candleField.appendChild(more);
     }
-    candleCount.textContent = `${count} candle${count == 1 ? '' : 's'} lit so far`;
+    candleCount.textContent = `${count.toLocaleString()} candle${count === 1 ? '' : 's'} lit for Tala`;
   }
 
-  // Best-effort shared count — the field only appears if this loads successfully
-  fetch(`https://countapi.mileshilliard.com/api/v1/get/${COUNTER_KEY}`)
-    .then(res => res.ok ? res.json() : null)
-    .then(data => { if (data && data.value !== undefined) renderField(data.value, false); })
-    .catch(() => {});
+  // Ask the shared counter for the total ('get') or add one to it ('hit')
+  function counter(action) {
+    return fetch(`${COUNTER_URL}/${action}/${COUNTER_KEY}`)
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        const value = data ? Number(data.value) : NaN;
+        if (!Number.isFinite(value)) return null;
+        writeStore(LAST_COUNT_KEY, String(value));
+        return value;
+      })
+      .catch(() => null);
+  }
+
+  // Restore this visitor's own state — always works, no network needed
+  if (litToday()) showLit();
+
+  // Show the last total this browser saw right away, then refresh it from the shared counter
+  const remembered = Number(readStore(LAST_COUNT_KEY));
+  if (remembered > 0) renderField(remembered, false);
+
+  counter('get').then(value => {
+    if (value !== null) renderField(value, litToday());
+  });
 
   candleBtn.addEventListener('click', () => {
-    if (localStorage.getItem(CANDLE_KEY) === '1') return;
-    localStorage.setItem(CANDLE_KEY, '1');
+    if (litToday()) return;
+    writeStore(LIT_DATE_KEY, todayKey());
     showLit();
-    fetch(`https://countapi.mileshilliard.com/api/v1/hit/${COUNTER_KEY}`)
-      .then(res => res.ok ? res.json() : null)
-      .then(data => { if (data && data.value !== undefined) renderField(data.value, true); })
-      .catch(() => {});
+    counter('hit').then(value => {
+      if (value !== null) renderField(value, true);
+    });
   });
 </script>
 
