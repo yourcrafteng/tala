@@ -389,6 +389,38 @@
   }
   .prayer-form button:hover { background: var(--gold); }
   .prayer-form button:disabled { opacity: 0.6; cursor: default; }
+  .prayer-form .check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 0;
+    cursor: pointer;
+  }
+  .prayer-form .check input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin: 3px 0 0;
+    padding: 0;
+    accent-color: var(--gold-deep);
+  }
+  .prayer-form .reply-email { margin-top: 14px; }
+  .prayer-form .reply-email[hidden] { display: none; }
+  .prayer-form .hint {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    margin: 6px 0 0;
+  }
+  .reach-out {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
   .form-status {
     margin-top: 14px;
     font-size: 0.92rem;
@@ -673,6 +705,8 @@
         <p>Tala never stopped smiling, sticking out her silly little tongue, or taking her eyes off her parents and big sister, who never left her side. Through pain, she was filled with joy, peace, and light. That is her legacy, and who she will always be.</p>
         <p class="close">This page exists because of Tala. Congenital leukemia is rare, and it can arrive without any warning — even when everything about a pregnancy seems healthy. We're sharing her story, and what we learned, in the hope that we can help any other family going through this, in any way we can. <span class="alone">If that's you: you are not alone.</span></p>
       </div>
+      <!-- A way for families to reach out. The address is assembled by the script at the bottom of the page. -->
+      <p class="reach-out">If you are a parent going through this, you can write to us at <a id="familyEmail" href="#message">family [at] talatoa.org</a>, or <a href="#message">leave a message below</a>.</p>
     </section>
 
     <!-- Section 4a: Light a candle -->
@@ -695,7 +729,7 @@
     </section>
 
     <!-- Section 4b: Prayers & messages -->
-    <section>
+    <section id="message">
       <p class="eyebrow">For Tala</p>
       <h2>Leave a prayer or message</h2>
       <p>If you'd like to share a prayer, a memory, or a few words for Tala and her family, we'd be grateful to read them.</p>
@@ -708,6 +742,17 @@
         <div class="field">
           <label for="prayerMessage">Your message</label>
           <textarea id="prayerMessage" name="message" placeholder="Share a prayer, memory, or message..." required></textarea>
+        </div>
+        <div class="field">
+          <label class="check" for="replyWanted">
+            <input type="checkbox" id="replyWanted" name="reply_requested" value="Yes, this parent would like a reply">
+            <span>I'm a parent going through this and would like a reply</span>
+          </label>
+          <div class="reply-email" id="replyEmailWrap" hidden>
+            <label for="replyEmail">Your email</label>
+            <input type="email" id="replyEmail" name="email" placeholder="you@example.com" autocomplete="email">
+            <p class="hint">Only used to write back to you. It is never shown on this page.</p>
+          </div>
         </div>
         <button type="submit">Send message</button>
         <p id="formStatus" class="form-status" role="status"></p>
@@ -795,6 +840,23 @@
   const prayerForm = document.getElementById('prayerForm');
   const formStatus = document.getElementById('formStatus');
 
+  // "I'd like a reply": show the email field only when the box is ticked
+  const replyWanted = document.getElementById('replyWanted');
+  const replyEmailWrap = document.getElementById('replyEmailWrap');
+  const replyEmail = document.getElementById('replyEmail');
+  function syncReplyField() {
+    replyEmailWrap.hidden = !replyWanted.checked;
+    replyEmail.required = replyWanted.checked;
+    if (!replyWanted.checked) replyEmail.value = '';
+  }
+  replyWanted.addEventListener('change', syncReplyField);
+
+  // Contact address, put together here so it is harder for spam robots to collect
+  const familyEmail = document.getElementById('familyEmail');
+  const familyAddress = ['family', 'talatoa.org'].join('@');
+  familyEmail.textContent = familyAddress;
+  familyEmail.href = 'mailto:' + familyAddress;
+
   prayerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const submitBtn = prayerForm.querySelector('button');
@@ -809,6 +871,7 @@
 
       if (response.ok) {
         prayerForm.reset();
+        syncReplyField();
         formStatus.textContent = 'Thank you — your message has been sent.';
         formStatus.className = 'form-status success';
       } else {
