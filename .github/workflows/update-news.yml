@@ -1,0 +1,30 @@
+# Refreshes news.json once a day with the newest research papers and clinical
+# trials on childhood and congenital AML. See scripts/update_news.py.
+name: Update research news
+
+on:
+  schedule:
+    - cron: "17 10 * * *"   # every day at 10:17 UTC (early morning in Florida)
+  workflow_dispatch:         # lets you run it by hand from the Actions tab
+  push:
+    branches: [news-feed]    # test runs while this feature is being built
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/update_news.py
+      - name: Save news.json if it changed
+        run: |
+          git config user.name "talatoa.org news updater"
+          git config user.email "actions@users.noreply.github.com"
+          git add news.json
+          git diff --cached --quiet || git commit -m "Update research news"
+          git push

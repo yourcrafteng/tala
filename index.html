@@ -523,6 +523,23 @@
     line-height: 1.5;
   }
 
+  /* ── Latest research ────────────────────── */
+  .news-list { margin-bottom: 18px; }
+  .news-list .res .meta {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 4px;
+  }
+  .news-list .res .name { font-weight: 500; line-height: 1.45; }
+  .news-updated {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    margin: 0 0 18px;
+  }
+
   /* ── Footer ─────────────────────────────── */
   footer {
     border-top: 1px solid var(--line);
@@ -796,6 +813,19 @@
       </div>
     </section>
 
+    <!-- Section 6: Latest research. Filled in from news.json, which is refreshed once a day
+         (see scripts/update_news.py). The whole section stays hidden if there is nothing to show. -->
+    <section id="news" hidden>
+      <p class="eyebrow">Research</p>
+      <h2>Latest research on childhood AML</h2>
+      <p>New research papers and clinical trials on childhood and congenital AML, gathered automatically each day from PubMed and ClinicalTrials.gov, both run by the U.S. National Institutes of Health.</p>
+      <div class="news-list" id="newsList"></div>
+      <p class="news-updated" id="newsUpdated"></p>
+      <div class="care">
+        These links are listed automatically and are not reviewed or endorsed by our family. They are written for researchers, are not medical advice, and may not apply to any one child. Please talk with your child's medical team about anything you read here.
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -865,6 +895,49 @@
 
     submitBtn.disabled = false;
   });
+
+  // ── Latest research ─────────────────────────────────────────
+  // Reads news.json (refreshed daily) and lists the items. If the file is
+  // missing or empty, the section simply stays hidden.
+  (function () {
+    const section = document.getElementById('news');
+    const list = document.getElementById('newsList');
+    const updated = document.getElementById('newsUpdated');
+    const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                    'August', 'September', 'October', 'November', 'December'];
+    function niceDate(iso) {
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+      return m ? `${MONTHS[Number(m[2]) - 1]} ${Number(m[3])}, ${m[1]}` : '';
+    }
+    fetch('news.json', { cache: 'no-cache' })
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        const items = data && Array.isArray(data.items) ? data.items : [];
+        items.forEach(item => {
+          if (!item || !item.title || !/^https:\/\//.test(item.url || '')) return;
+          const a = document.createElement('a');
+          a.className = 'res';
+          a.href = item.url;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          const meta = document.createElement('p');
+          meta.className = 'meta';
+          meta.textContent = [item.kind, niceDate(item.date)].filter(Boolean).join(' · ');
+          const name = document.createElement('p');
+          name.className = 'name';
+          name.textContent = item.title;
+          const desc = document.createElement('p');
+          desc.className = 'desc';
+          desc.textContent = item.source || '';
+          a.append(meta, name, desc);
+          list.appendChild(a);
+        });
+        if (!list.children.length) return;
+        if (data.updated) updated.textContent = `Last updated ${niceDate(data.updated)}.`;
+        section.hidden = false;
+      })
+      .catch(() => {});
+  })();
 
   // ── Light a candle for Tala ─────────────────────────────────
   // Each visitor can light one candle per day. The running total is kept by a
