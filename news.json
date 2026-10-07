@@ -23,10 +23,10 @@
     },
     {
       "kind": "Research paper",
-      "title": "Dysregulation of circadian clock gene BMAL1 and cell cycle regulator WEE1 in pediatric AML",
-      "source": "Molecular biology reports",
-      "date": "2026-09-25",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42789178/"
+      "title": "Association between hematopoietic recovery indicators and minimal residual disease after induction therapy in newly diagnosed pediatric acute myeloid leukemia",
+      "source": "Frontiers in medicine",
+      "date": "2026-09-22",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42840037/"
     },
     {
       "kind": "Clinical trial",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-05"
+  "updated": "2026-10-07"
 }
