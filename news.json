@@ -1,25 +1,18 @@
 {
   "items": [
     {
+      "kind": "Clinical trial",
+      "title": "Low Dose Induction for Pediatric Acute Myeloid Leukemia Patients",
+      "source": "ClinicalTrials.gov",
+      "date": "2026-10-09",
+      "url": "https://clinicaltrials.gov/study/NCT07867600"
+    },
+    {
       "kind": "Research paper",
       "title": "Reactive oxygen species define leukemia stem cell identity in pediatric acute myeloid leukemia",
       "source": "Cancer letters",
       "date": "2026-10-04",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42830144/"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Low-Dose Cytarabine Plus G-CSF Induction in Pediatric M2 Acute Myeloid Leukemia: A Multicenter Study",
-      "source": "Cancer medicine",
-      "date": "2026-10-01",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42817041/"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Efficacy and safety of risk-stratified chemotherapy with azacitidine for children with myeloid leukaemia with Down syndrome: protocol for a multicentre phase II trial (JCCG AML-D24)",
-      "source": "BMJ open",
-      "date": "2026-09-30",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42816079/"
     },
     {
       "kind": "Research paper",
@@ -29,6 +22,13 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42840037/"
     },
     {
+      "kind": "Research paper",
+      "title": "Clinical Characteristics and Prognostic Analysis of Pediatric Acute Myeloid Leukemia With CBFB::MYH11: A 10-Year Single-Center Cohort Study",
+      "source": "Clinical lymphoma, myeloma & leukemia",
+      "date": "2026-09-15",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850181/"
+    },
+    {
       "kind": "Clinical trial",
       "title": "A Study of Sonrotoclax (BGB-11417) in Children With Relapsed or Refractory Acute Myeloid Leukemia and B-cell Acute Lymphoblastic Leukemia",
       "source": "ClinicalTrials.gov",
@@ -36,16 +36,16 @@
       "url": "https://clinicaltrials.gov/study/NCT07770698"
     },
     {
-      "kind": "Clinical trial",
-      "title": "Plasma ctDNA Monitoring in Pediatric Acute Leukemia",
-      "source": "ClinicalTrials.gov",
-      "date": "2026-08-07",
-      "url": "https://clinicaltrials.gov/study/NCT07751588"
+      "kind": "Research paper",
+      "title": "[Clinical analysis of nine pediatric cases of acute myeloid leukemia with NUP98 rearrangement]",
+      "source": "Zhonghua xue ye xue za zhi = Zhonghua xueyexue zazhi",
+      "date": "2026-08-14",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42851181/"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-07"
+  "updated": "2026-10-09"
 }
