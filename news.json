@@ -1,18 +1,18 @@
 {
   "items": [
     {
+      "kind": "Research paper",
+      "title": "Mitochondria transfer via tunneling nanotubes drives macrophage immunosuppression and metabolic reprogramming in pediatric AML",
+      "source": "Leukemia",
+      "date": "2026-10-09",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855473/"
+    },
+    {
       "kind": "Clinical trial",
       "title": "Low Dose Induction for Pediatric Acute Myeloid Leukemia Patients",
       "source": "ClinicalTrials.gov",
       "date": "2026-10-09",
       "url": "https://clinicaltrials.gov/study/NCT07867600"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Reactive oxygen species define leukemia stem cell identity in pediatric acute myeloid leukemia",
-      "source": "Cancer letters",
-      "date": "2026-10-04",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42830144/"
     },
     {
       "kind": "Research paper",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-09"
+  "updated": "2026-10-10"
 }
