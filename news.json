@@ -2,6 +2,13 @@
   "items": [
     {
       "kind": "Research paper",
+      "title": "Beyond the Favorable-Risk Label: Sequential Measurable Residual Disease and KIT Variant Status in Pediatric Core-Binding Factor Acute Myeloid Leukemia",
+      "source": "Annals of laboratory medicine",
+      "date": "2026-10-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42860294/"
+    },
+    {
+      "kind": "Research paper",
       "title": "Mitochondria transfer via tunneling nanotubes drives macrophage immunosuppression and metabolic reprogramming in pediatric AML",
       "source": "Leukemia",
       "date": "2026-10-09",
@@ -13,13 +20,6 @@
       "source": "ClinicalTrials.gov",
       "date": "2026-10-09",
       "url": "https://clinicaltrials.gov/study/NCT07867600"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Association between hematopoietic recovery indicators and minimal residual disease after induction therapy in newly diagnosed pediatric acute myeloid leukemia",
-      "source": "Frontiers in medicine",
-      "date": "2026-09-22",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42840037/"
     },
     {
       "kind": "Research paper",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-10"
+  "updated": "2026-10-12"
 }
