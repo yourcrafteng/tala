@@ -4,8 +4,15 @@
       "kind": "Research paper",
       "title": "Beyond the Favorable-Risk Label: Sequential Measurable Residual Disease and KIT Variant Status in Pediatric Core-Binding Factor Acute Myeloid Leukemia",
       "source": "Annals of laboratory medicine",
-      "date": "2026-10-12",
+      "date": "2026-10-14",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42860294/"
+    },
+    {
+      "kind": "Research paper",
+      "title": "Interpreting the Association Between Plasma Citrulline and Bloodstream Infection in Pediatric Acute Myeloid Leukemia",
+      "source": "European journal of haematology",
+      "date": "2026-10-13",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42867012/"
     },
     {
       "kind": "Research paper",
@@ -20,13 +27,6 @@
       "source": "ClinicalTrials.gov",
       "date": "2026-10-09",
       "url": "https://clinicaltrials.gov/study/NCT07867600"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Clinical Characteristics and Prognostic Analysis of Pediatric Acute Myeloid Leukemia With CBFB::MYH11: A 10-Year Single-Center Cohort Study",
-      "source": "Clinical lymphoma, myeloma & leukemia",
-      "date": "2026-09-15",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850181/"
     },
     {
       "kind": "Clinical trial",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-12"
+  "updated": "2026-10-14"
 }
