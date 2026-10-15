@@ -2,9 +2,16 @@
   "items": [
     {
       "kind": "Research paper",
+      "title": "[Clinical analysis of modified Chinese Children Leukemia Group-Acute Myeloid Leukemia 2019 regimen in treating pediatric acute myeloid leukemia]",
+      "source": "Zhonghua er ke za zhi = Chinese journal of pediatrics",
+      "date": "2026-10-15",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42876096/"
+    },
+    {
+      "kind": "Research paper",
       "title": "Beyond the Favorable-Risk Label: Sequential Measurable Residual Disease and KIT Variant Status in Pediatric Core-Binding Factor Acute Myeloid Leukemia",
       "source": "Annals of laboratory medicine",
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42860294/"
     },
     {
@@ -34,18 +41,11 @@
       "source": "ClinicalTrials.gov",
       "date": "2026-08-18",
       "url": "https://clinicaltrials.gov/study/NCT07770698"
-    },
-    {
-      "kind": "Research paper",
-      "title": "[Clinical analysis of nine pediatric cases of acute myeloid leukemia with NUP98 rearrangement]",
-      "source": "Zhonghua xue ye xue za zhi = Zhonghua xueyexue zazhi",
-      "date": "2026-08-14",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42851181/"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-14"
+  "updated": "2026-10-15"
 }
