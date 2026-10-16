@@ -2,17 +2,24 @@
   "items": [
     {
       "kind": "Research paper",
+      "title": "Beyond the Favorable-Risk Label: Sequential Measurable Residual Disease and KIT Variant Status in Pediatric Core-Binding Factor Acute Myeloid Leukemia",
+      "source": "Annals of laboratory medicine",
+      "date": "2026-10-16",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42860294/"
+    },
+    {
+      "kind": "Clinical trial",
+      "title": "CARCIK CD123/33 for Refractory/Relapsed AML and BPDCN in Children and Adults",
+      "source": "ClinicalTrials.gov",
+      "date": "2026-10-16",
+      "url": "https://clinicaltrials.gov/study/NCT07877610"
+    },
+    {
+      "kind": "Research paper",
       "title": "[Clinical analysis of modified Chinese Children Leukemia Group-Acute Myeloid Leukemia 2019 regimen in treating pediatric acute myeloid leukemia]",
       "source": "Zhonghua er ke za zhi = Chinese journal of pediatrics",
       "date": "2026-10-15",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42876096/"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Beyond the Favorable-Risk Label: Sequential Measurable Residual Disease and KIT Variant Status in Pediatric Core-Binding Factor Acute Myeloid Leukemia",
-      "source": "Annals of laboratory medicine",
-      "date": "2026-10-15",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42860294/"
     },
     {
       "kind": "Research paper",
@@ -22,13 +29,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42867012/"
     },
     {
-      "kind": "Research paper",
-      "title": "Mitochondria transfer via tunneling nanotubes drives macrophage immunosuppression and metabolic reprogramming in pediatric AML",
-      "source": "Leukemia",
-      "date": "2026-10-09",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855473/"
-    },
-    {
       "kind": "Clinical trial",
       "title": "Low Dose Induction for Pediatric Acute Myeloid Leukemia Patients",
       "source": "ClinicalTrials.gov",
@@ -36,16 +36,16 @@
       "url": "https://clinicaltrials.gov/study/NCT07867600"
     },
     {
-      "kind": "Clinical trial",
-      "title": "A Study of Sonrotoclax (BGB-11417) in Children With Relapsed or Refractory Acute Myeloid Leukemia and B-cell Acute Lymphoblastic Leukemia",
-      "source": "ClinicalTrials.gov",
-      "date": "2026-08-18",
-      "url": "https://clinicaltrials.gov/study/NCT07770698"
+      "kind": "Research paper",
+      "title": "Fusion-specific co-mutational architecture and treatment-response associations in pediatric core-binding factor acute myeloid leukemia: a multicenter exome-profiled cohort",
+      "source": "Frontiers in oncology",
+      "date": "2026-09-30",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42876759/"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-15"
+  "updated": "2026-10-16"
 }
