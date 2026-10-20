@@ -2,10 +2,10 @@
   "items": [
     {
       "kind": "Research paper",
-      "title": "Beyond the Favorable-Risk Label: Sequential Measurable Residual Disease and KIT Variant Status in Pediatric Core-Binding Factor Acute Myeloid Leukemia",
-      "source": "Annals of laboratory medicine",
+      "title": "Premature treatment cessation in pediatric acute myeloid leukemia due to excessive toxicity: clinical experiences and patient outcomes - a case series",
+      "source": "Pediatric hematology and oncology",
       "date": "2026-10-19",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42860294/"
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42897863/"
     },
     {
       "kind": "Clinical trial",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-19"
+  "updated": "2026-10-20"
 }
