@@ -2,6 +2,13 @@
   "items": [
     {
       "kind": "Research paper",
+      "title": "Invisible Enemy: CMV Retinitis Despite Persistent Blood PCR Negativity in Pediatric AML",
+      "source": "Turkish journal of haematology : official journal of Turkish Society of Haematology",
+      "date": "2026-10-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42898587/"
+    },
+    {
+      "kind": "Research paper",
       "title": "Premature treatment cessation in pediatric acute myeloid leukemia due to excessive toxicity: clinical experiences and patient outcomes - a case series",
       "source": "Pediatric hematology and oncology",
       "date": "2026-10-19",
@@ -22,13 +29,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42876096/"
     },
     {
-      "kind": "Research paper",
-      "title": "Interpreting the Association Between Plasma Citrulline and Bloodstream Infection in Pediatric Acute Myeloid Leukemia",
-      "source": "European journal of haematology",
-      "date": "2026-10-13",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42867012/"
-    },
-    {
       "kind": "Clinical trial",
       "title": "Low Dose Induction for Pediatric Acute Myeloid Leukemia Patients",
       "source": "ClinicalTrials.gov",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-20"
+  "updated": "2026-10-21"
 }
