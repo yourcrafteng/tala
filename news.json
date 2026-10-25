@@ -22,18 +22,18 @@
       "url": "https://clinicaltrials.gov/study/NCT07877610"
     },
     {
-      "kind": "Research paper",
-      "title": "[Clinical analysis of modified Chinese Children Leukemia Group-Acute Myeloid Leukemia 2019 regimen in treating pediatric acute myeloid leukemia]",
-      "source": "Zhonghua er ke za zhi = Chinese journal of pediatrics",
-      "date": "2026-10-15",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42876096/"
-    },
-    {
       "kind": "Clinical trial",
       "title": "Low Dose Induction for Pediatric Acute Myeloid Leukemia Patients",
       "source": "ClinicalTrials.gov",
       "date": "2026-10-09",
       "url": "https://clinicaltrials.gov/study/NCT07867600"
+    },
+    {
+      "kind": "Research paper",
+      "title": "CBFA2T3-GLIS2 establishes transcriptionally permissive enhancer hypermethylation associated with venetoclax response in pediatric AML",
+      "source": "bioRxiv : the preprint server for biology",
+      "date": "2026-10-08",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42926483/"
     },
     {
       "kind": "Research paper",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-21"
+  "updated": "2026-10-25"
 }
