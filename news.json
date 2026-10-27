@@ -2,17 +2,17 @@
   "items": [
     {
       "kind": "Research paper",
-      "title": "Invisible Enemy: CMV Retinitis Despite Persistent Blood PCR Negativity in Pediatric AML",
-      "source": "Turkish journal of haematology : official journal of Turkish Society of Haematology",
-      "date": "2026-10-20",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42898587/"
+      "title": "Immunophenotypic and genetic features of pediatric non-DS AMKL versus non-AMKL AML: A single-center study in China",
+      "source": "Cytometry. Part B, Clinical cytometry",
+      "date": "2026-10-26",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42934831/"
     },
     {
       "kind": "Research paper",
-      "title": "Premature treatment cessation in pediatric acute myeloid leukemia due to excessive toxicity: clinical experiences and patient outcomes - a case series",
-      "source": "Pediatric hematology and oncology",
-      "date": "2026-10-19",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42897863/"
+      "title": "Physiologically Based Pharmacokinetic Modeling of Venetoclax in Pediatric Acute Myeloid Leukemia: Food Effects, Age-Related Pharmacokinetics, and Voriconazole-Mediated Drug-Drug Interactions",
+      "source": "Pharmaceutics",
+      "date": "2026-10-21",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42942864/"
     },
     {
       "kind": "Clinical trial",
@@ -22,30 +22,30 @@
       "url": "https://clinicaltrials.gov/study/NCT07877610"
     },
     {
+      "kind": "Research paper",
+      "title": "Genomic Determinants of Induction Failure and Persistent Prognostic Risk of FLT3-ITD in Pediatric Acute Myeloid Leukemia",
+      "source": "Cancers",
+      "date": "2026-10-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42938817/"
+    },
+    {
+      "kind": "Research paper",
+      "title": "Clinical outcomes and prognostic factors in pediatric acute myeloid leukemia with monocytic differentiation: a single-center cohort study from Egypt",
+      "source": "Frontiers in oncology",
+      "date": "2026-10-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42935548/"
+    },
+    {
       "kind": "Clinical trial",
       "title": "Low Dose Induction for Pediatric Acute Myeloid Leukemia Patients",
       "source": "ClinicalTrials.gov",
       "date": "2026-10-09",
       "url": "https://clinicaltrials.gov/study/NCT07867600"
-    },
-    {
-      "kind": "Research paper",
-      "title": "CBFA2T3-GLIS2 establishes transcriptionally permissive enhancer hypermethylation associated with venetoclax response in pediatric AML",
-      "source": "bioRxiv : the preprint server for biology",
-      "date": "2026-10-08",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42926483/"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Fusion-specific co-mutational architecture and treatment-response associations in pediatric core-binding factor acute myeloid leukemia: a multicenter exome-profiled cohort",
-      "source": "Frontiers in oncology",
-      "date": "2026-09-30",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42876759/"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-25"
+  "updated": "2026-10-27"
 }
