@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "kind": "Clinical trial",
+      "title": "A Study of CLEC2A CAR T for Pediatric and Adult Patients With Relapsed or Refractory AML",
+      "source": "ClinicalTrials.gov",
+      "date": "2026-10-29",
+      "url": "https://clinicaltrials.gov/study/NCT07905027"
+    },
+    {
       "kind": "Research paper",
       "title": "Immunophenotypic and genetic features of pediatric non-DS AMKL versus non-AMKL AML: A single-center study in China",
       "source": "Cytometry. Part B, Clinical cytometry",
@@ -34,18 +41,11 @@
       "source": "Frontiers in oncology",
       "date": "2026-10-12",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42935548/"
-    },
-    {
-      "kind": "Clinical trial",
-      "title": "Low Dose Induction for Pediatric Acute Myeloid Leukemia Patients",
-      "source": "ClinicalTrials.gov",
-      "date": "2026-10-09",
-      "url": "https://clinicaltrials.gov/study/NCT07867600"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-29"
 }
