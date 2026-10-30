@@ -1,18 +1,18 @@
 {
   "items": [
     {
+      "kind": "Research paper",
+      "title": "CSE1L enrichment in pediatric and young adult acute myeloid leukemia reveals a ribosomal export dependency",
+      "source": "Cell reports",
+      "date": "2026-10-29",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42955952/"
+    },
+    {
       "kind": "Clinical trial",
       "title": "A Study of CLEC2A CAR T for Pediatric and Adult Patients With Relapsed or Refractory AML",
       "source": "ClinicalTrials.gov",
       "date": "2026-10-29",
       "url": "https://clinicaltrials.gov/study/NCT07905027"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Immunophenotypic and genetic features of pediatric non-DS AMKL versus non-AMKL AML: A single-center study in China",
-      "source": "Cytometry. Part B, Clinical cytometry",
-      "date": "2026-10-26",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42934831/"
     },
     {
       "kind": "Research paper",
@@ -37,15 +37,15 @@
     },
     {
       "kind": "Research paper",
-      "title": "Clinical outcomes and prognostic factors in pediatric acute myeloid leukemia with monocytic differentiation: a single-center cohort study from Egypt",
-      "source": "Frontiers in oncology",
-      "date": "2026-10-12",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42935548/"
+      "title": "Characterization of chemoresistant cell populations improves risk stratification and therapy prediction in pediatric acute myeloid leukemia",
+      "source": "Nature communications",
+      "date": "2026-10-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42957737/"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-29"
+  "updated": "2026-10-30"
 }
