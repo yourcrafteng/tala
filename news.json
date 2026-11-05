@@ -2,6 +2,20 @@
   "items": [
     {
       "kind": "Research paper",
+      "title": "BCL11B-activated pediatric acute myeloid leukemia: a high-risk disease with frequent induction failure",
+      "source": "Haematologica",
+      "date": "2026-11-05",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42984414/"
+    },
+    {
+      "kind": "Research paper",
+      "title": "Reply to: \"Interpreting the Association Between Plasma Citrulline and Bloodstream Infection in Pediatric Acute Myeloid Leukemia\"",
+      "source": "European journal of haematology",
+      "date": "2026-11-04",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42983821/"
+    },
+    {
+      "kind": "Research paper",
       "title": "CSE1L enrichment in pediatric and young adult acute myeloid leukemia reveals a ribosomal export dependency",
       "source": "Cell reports",
       "date": "2026-10-29",
@@ -15,25 +29,11 @@
       "url": "https://clinicaltrials.gov/study/NCT07905027"
     },
     {
-      "kind": "Research paper",
-      "title": "Physiologically Based Pharmacokinetic Modeling of Venetoclax in Pediatric Acute Myeloid Leukemia: Food Effects, Age-Related Pharmacokinetics, and Voriconazole-Mediated Drug-Drug Interactions",
-      "source": "Pharmaceutics",
-      "date": "2026-10-21",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42942864/"
-    },
-    {
       "kind": "Clinical trial",
       "title": "CARCIK CD123/33 for Refractory/Relapsed AML and BPDCN in Children and Adults",
       "source": "ClinicalTrials.gov",
       "date": "2026-10-16",
       "url": "https://clinicaltrials.gov/study/NCT07877610"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Genomic Determinants of Induction Failure and Persistent Prognostic Risk of FLT3-ITD in Pediatric Acute Myeloid Leukemia",
-      "source": "Cancers",
-      "date": "2026-10-12",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42938817/"
     },
     {
       "kind": "Research paper",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-10-30"
+  "updated": "2026-11-05"
 }
