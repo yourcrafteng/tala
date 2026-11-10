@@ -15,13 +15,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42983821/"
     },
     {
-      "kind": "Research paper",
-      "title": "CSE1L enrichment in pediatric and young adult acute myeloid leukemia reveals a ribosomal export dependency",
-      "source": "Cell reports",
-      "date": "2026-10-29",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42955952/"
-    },
-    {
       "kind": "Clinical trial",
       "title": "A Study of CLEC2A CAR T for Pediatric and Adult Patients With Relapsed or Refractory AML",
       "source": "ClinicalTrials.gov",
@@ -41,11 +34,18 @@
       "source": "Nature communications",
       "date": "2026-10-02",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42957737/"
+    },
+    {
+      "kind": "Research paper",
+      "title": "Advances in CBFA2T3::GLIS2 fusion gene in pediatric acute myeloid leukemia: from molecular mechanisms to targeted therapeutic strategies",
+      "source": "Annals of hematology",
+      "date": "2026-08-13",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43004022/"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-11-05"
+  "updated": "2026-11-10"
 }
