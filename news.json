@@ -2,6 +2,13 @@
   "items": [
     {
       "kind": "Research paper",
+      "title": "Allogeneic CD33/CD123 CAR-T сells in pediatric relapsed/refractory AML: early single-center experience",
+      "source": "Transplantation and cellular therapy",
+      "date": "2026-11-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43020328/"
+    },
+    {
+      "kind": "Research paper",
       "title": "BCL11B-activated pediatric acute myeloid leukemia: a high-risk disease with frequent induction failure",
       "source": "Haematologica",
       "date": "2026-11-05",
@@ -9,10 +16,10 @@
     },
     {
       "kind": "Research paper",
-      "title": "Reply to: \"Interpreting the Association Between Plasma Citrulline and Bloodstream Infection in Pediatric Acute Myeloid Leukemia\"",
-      "source": "European journal of haematology",
-      "date": "2026-11-04",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42983821/"
+      "title": "Integrated multi-omics reveals methylation-linked biological heterogeneity in intermediate-risk pediatric acute myeloid leukemia",
+      "source": "iScience",
+      "date": "2026-11-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43022221/"
     },
     {
       "kind": "Clinical trial",
@@ -30,13 +37,6 @@
     },
     {
       "kind": "Research paper",
-      "title": "Characterization of chemoresistant cell populations improves risk stratification and therapy prediction in pediatric acute myeloid leukemia",
-      "source": "Nature communications",
-      "date": "2026-10-02",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42957737/"
-    },
-    {
-      "kind": "Research paper",
       "title": "Advances in CBFA2T3::GLIS2 fusion gene in pediatric acute myeloid leukemia: from molecular mechanisms to targeted therapeutic strategies",
       "source": "Annals of hematology",
       "date": "2026-08-13",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-11-10"
+  "updated": "2026-11-13"
 }
