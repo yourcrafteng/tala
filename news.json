@@ -2,17 +2,24 @@
   "items": [
     {
       "kind": "Research paper",
-      "title": "Allogeneic CD33/CD123 CAR-T сells in pediatric relapsed/refractory AML: early single-center experience",
-      "source": "Transplantation and cellular therapy",
-      "date": "2026-11-12",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43020328/"
+      "title": "[Clinical features and prognosis of childhood acute myeloid leukemia with NUP98 generearrangement]",
+      "source": "Zhongguo dang dai er ke za zhi = Chinese journal of contemporary pediatrics",
+      "date": "2026-11-15",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43059335/"
     },
     {
       "kind": "Research paper",
-      "title": "BCL11B-activated pediatric acute myeloid leukemia: a high-risk disease with frequent induction failure",
-      "source": "Haematologica",
-      "date": "2026-11-05",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42984414/"
+      "title": "Targeting polyamine metabolism and eIF5A hypusination in pediatric acute myeloid leukemia",
+      "source": "Research square",
+      "date": "2026-11-10",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43060137/"
+    },
+    {
+      "kind": "Research paper",
+      "title": "Fulminant congenital leukemia presenting with coma and intracranial hemorrhage: the first case report from Kazakhstan",
+      "source": "Frontiers in pediatrics",
+      "date": "2026-11-03",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061536/"
     },
     {
       "kind": "Research paper",
@@ -34,18 +41,11 @@
       "source": "ClinicalTrials.gov",
       "date": "2026-10-16",
       "url": "https://clinicaltrials.gov/study/NCT07877610"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Advances in CBFA2T3::GLIS2 fusion gene in pediatric acute myeloid leukemia: from molecular mechanisms to targeted therapeutic strategies",
-      "source": "Annals of hematology",
-      "date": "2026-08-13",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43004022/"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-11-13"
+  "updated": "2026-11-20"
 }
