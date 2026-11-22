@@ -2,6 +2,13 @@
   "items": [
     {
       "kind": "Research paper",
+      "title": "Pediatric Acute Myeloid Leukemia Treatment Outcomes: A Retrospective Cohort Study on Prognostic Factors and Survival in a Low- to Middle-Income Country",
+      "source": "Acta haematologica",
+      "date": "2026-11-21",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43066622/"
+    },
+    {
+      "kind": "Research paper",
       "title": "[Clinical features and prognosis of childhood acute myeloid leukemia with NUP98 generearrangement]",
       "source": "Zhongguo dang dai er ke za zhi = Chinese journal of contemporary pediatrics",
       "date": "2026-11-15",
@@ -22,13 +29,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/43061536/"
     },
     {
-      "kind": "Research paper",
-      "title": "Integrated multi-omics reveals methylation-linked biological heterogeneity in intermediate-risk pediatric acute myeloid leukemia",
-      "source": "iScience",
-      "date": "2026-11-02",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43022221/"
-    },
-    {
       "kind": "Clinical trial",
       "title": "A Study of CLEC2A CAR T for Pediatric and Adult Patients With Relapsed or Refractory AML",
       "source": "ClinicalTrials.gov",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-11-20"
+  "updated": "2026-11-22"
 }
