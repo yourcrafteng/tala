@@ -9,17 +9,17 @@
     },
     {
       "kind": "Research paper",
-      "title": "[Clinical features and prognosis of childhood acute myeloid leukemia with NUP98 generearrangement]",
-      "source": "Zhongguo dang dai er ke za zhi = Chinese journal of contemporary pediatrics",
-      "date": "2026-11-15",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43059335/"
-    },
-    {
-      "kind": "Research paper",
       "title": "Targeting polyamine metabolism and eIF5A hypusination in pediatric acute myeloid leukemia",
       "source": "Research square",
       "date": "2026-11-10",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43060137/"
+    },
+    {
+      "kind": "Research paper",
+      "title": "Case Report: Low-dose AML therapy with the Brazilian pediatric GELMAI protocol as a bridge strategy during a high-risk pregnancy complicated by severe infection: sustained maternal remission and survival with favorable early developmental follow-up",
+      "source": "Frontiers in medicine",
+      "date": "2026-11-09",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43074942/"
     },
     {
       "kind": "Research paper",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-11-22"
+  "updated": "2026-11-24"
 }
