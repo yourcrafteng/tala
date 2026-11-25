@@ -2,17 +2,17 @@
   "items": [
     {
       "kind": "Research paper",
+      "title": "Pre-Emptive Azacitidine for Molecular Relapse in Pediatric AML: Results of the AMoRe2017 Trial",
+      "source": "Pediatric blood & cancer",
+      "date": "2026-11-25",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43082050/"
+    },
+    {
+      "kind": "Research paper",
       "title": "Pediatric Acute Myeloid Leukemia Treatment Outcomes: A Retrospective Cohort Study on Prognostic Factors and Survival in a Low- to Middle-Income Country",
       "source": "Acta haematologica",
       "date": "2026-11-21",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43066622/"
-    },
-    {
-      "kind": "Research paper",
-      "title": "Targeting polyamine metabolism and eIF5A hypusination in pediatric acute myeloid leukemia",
-      "source": "Research square",
-      "date": "2026-11-10",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43060137/"
     },
     {
       "kind": "Research paper",
@@ -47,5 +47,5 @@
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-11-24"
+  "updated": "2026-11-25"
 }
