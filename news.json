@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "kind": "Clinical trial",
+      "title": "Multicenter Study of Treatment for Pediatric Acute Myeloid Leukemia",
+      "source": "ClinicalTrials.gov",
+      "date": "2026-11-27",
+      "url": "https://clinicaltrials.gov/study/NCT07961187"
+    },
+    {
       "kind": "Research paper",
       "title": "Pre-Emptive Azacitidine for Molecular Relapse in Pediatric AML: Results of the AMoRe2017 Trial",
       "source": "Pediatric blood & cancer",
@@ -34,18 +41,11 @@
       "source": "ClinicalTrials.gov",
       "date": "2026-10-29",
       "url": "https://clinicaltrials.gov/study/NCT07905027"
-    },
-    {
-      "kind": "Clinical trial",
-      "title": "CARCIK CD123/33 for Refractory/Relapsed AML and BPDCN in Children and Adults",
-      "source": "ClinicalTrials.gov",
-      "date": "2026-10-16",
-      "url": "https://clinicaltrials.gov/study/NCT07877610"
     }
   ],
   "sources": {
     "pubmed": "ok (4)",
     "clinicaltrials": "ok (2)"
   },
-  "updated": "2026-11-25"
+  "updated": "2026-11-27"
 }
